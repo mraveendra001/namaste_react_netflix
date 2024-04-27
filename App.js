@@ -16,28 +16,22 @@
  * 
  * 
  */
-  
-  const parent =React.createElement("div",
-                              {id:"parent"},[
-                React.createElement("div",{id:"child"},
-                [React.createElement("h1",{},"i am h1 tag"),
-                React.createElement("h2",{},"i am h2 tag")
-            ]) ,
- React.createElement("div",{id:"child2"},
- [React.createElement("h1",{},"i am h12 tag"),
- React.createElement("h2",{},"i am h22 tag")
-                       ])
-                         ]
-                        );
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-    console.log(parent);
-            // const heading=React.createElement("h1",
-            // {id:"heading",xyz:"abc"},
-            // "hi from react");
+const parent = React.createElement("div", { id: "parent" }, [
+  React.createElement("div", { id: "child" }, [
+    React.createElement("h1", {}, "This is Namaste React 🚀"),
+    React.createElement("h2", {}, "by Meghana R"),
+  ]),
+  React.createElement("div", { id: "child2" }, [
+    React.createElement("h1", {}, "I'm an h1 tag"),
+    React.createElement("h2", {}, "I'm an h2der tag"),
+  ]),
+]);
 
-            // console.log(heading);
+console.log(parent); // object
 
-            const root=ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
-            root.render(parent);
-       
+root.render(parent);
